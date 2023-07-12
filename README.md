@@ -56,16 +56,23 @@ It works, but it is not nice and for more complicated project this would get muc
 All configuration is set in the [`CMakeLists.txt`](/CMakeLists.txt) file.
 
 Configure is required when modifying configuration, adding, renaming or moving files,
-or when inter-files dependencies are changed and for the first run of coure. It is done by
+or when inter-files dependencies are changed and for the first run of coure.
+It is done for `make` build system by
 
 ```
 cmake -S . -B build/
 ```
 
+or e.g. to use `ninja`
+
+```
+cmake -S . -B build/ -G Ninja
+```
+
 The build itself then goes with:
 
 ```
-
+cmake --build build/
 ```
 
 You can run your program using
