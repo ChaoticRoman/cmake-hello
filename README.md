@@ -27,12 +27,15 @@ Check commits one-by-one as they:
 
 1. start with not using CMake at all and building the thing using plain g++,
 1. use the simplest CMake 
+1. Hide the growing complexity to Makefile
 
 ### TODO
 
 1. Use hierarchical CMake files
-1. Use external dependencies
-1. Use CPM
+2. Testing
+3. Linting
+4. Use external dependencies
+5. Use CPM
 
 ## No build system
 
@@ -80,6 +83,11 @@ You can run your program using
 ```
 ./build/hello
 ```
+
+## Hiding the complexity
+
+It started to get bit ugly in previous section so we added helper Makefile
+to run previous commands. Now you can just use `make run` 
 
 ## References
 
