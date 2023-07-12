@@ -5,5 +5,6 @@
 #include <iostream>
 
 void print_message() {
-    std::cout << message() << std::endl;
+    auto msg = message();
+    std::cout << msg << std::endl;
 }

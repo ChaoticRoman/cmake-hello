@@ -89,6 +89,14 @@ You can run your program using
 It started to get bit ugly in previous section so we added helper Makefile
 to run previous commands. Now you can just use `make run` 
 
+## Debugging cmake projects with VS code
+
+[This guide][vscode] describes how to get debugger working. It is surprisingly neat, only
+thing to be aware of is that it does not binds to built-in Debug/Run (F5/Ctrl+F5)
+functionality but uses bottom bar buttons.
+
+[vscode]: https://www.pragmaticlinux.com/2021/07/import-a-cmake-project-into-visual-studio-code/
+
 ## References
 
 * https://blog.feabhas.com/2021/06/why-we-need-build-systems/
