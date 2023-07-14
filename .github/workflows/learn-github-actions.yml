@@ -1,0 +1,26 @@
+name: Build
+on:
+  push:
+jobs:
+  build-project:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        build-tool: [Unix Makefiles, Ninja]
+        compiler: [g++, clang++]
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3.5.3
+
+      - name: Configure the project
+        uses: threeal/cmake-action@v1.2.0
+        with:
+          build-dir: build_${{ matrix.build-tool }}_${{ matrix.compiler }}
+          generator: ${{ matrix.build-tool }}
+          cxx-compiler: ${{ matrix.compiler }}
+
+      - name: Build the project
+        run: cmake --build "build_${{ matrix.build-tool }}_${{ matrix.compiler }}"
+
+      - name: Test the project
+        run: ctest --test-dir "build_${{ matrix.build-tool }}_${{ matrix.compiler }}"

@@ -28,6 +28,7 @@ Check commits one-by-one as they:
 1. start with not using CMake at all and building the thing using plain g++,
 1. use the simplest CMake 
 1. Hide the growing complexity to Makefile
+1. Adds configure, build and test to GitHub pipeline.
 
 ### TODO
 
