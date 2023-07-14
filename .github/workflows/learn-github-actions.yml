@@ -23,4 +23,4 @@ jobs:
         run: cmake --build "build_${{ matrix.build-tool }}_${{ matrix.compiler }}"
 
       - name: Test the project
-        run: ctest --test-dir "build_${{ matrix.build-tool }}_${{ matrix.compiler }}"
+        run: ctest --test-dir "build_${{ matrix.build-tool }}_${{ matrix.compiler }}/tests"

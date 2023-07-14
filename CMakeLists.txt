@@ -11,8 +11,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-# Create sources variable
-file(GLOB_RECURSE SOURCES "src/*.cpp")
-message("Sources: ${SOURCES}")
+add_executable(hello
+    src/low/low.cpp
+    src/mid/mid.cpp
+    src/main.cpp
+)
 
-add_executable(hello ${SOURCES})
+add_subdirectory(tests)
