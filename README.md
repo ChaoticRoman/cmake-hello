@@ -4,17 +4,24 @@ Testing how to set up cmake for project with following structure:
 
 ```
 .
+├── CMakeLists.txt
 ├── include
 │   ├── low
 │   │   └── low.h
 │   └── mid
 │       └── mid.h
-└── src
-    ├── low
-    │   └── low.cpp
-    ├── main.cpp
-    └── mid
-        └── mid.cpp
+├── Makefile
+├── README.md
+├── src
+│   ├── low
+│   │   └── low.cpp
+│   ├── main.cpp
+│   └── mid
+│       └── mid.cpp
+└── tests
+    ├── CMakeLists.txt
+    └── low
+        └── test_low.cpp
 ```
 
 and following dependencies (`A -> B` means `A` depends on `B`):
@@ -25,15 +32,16 @@ main -> mid -> low
 
 Check commits one-by-one as they:
 
-1. start with not using CMake at all and building the thing using plain g++,
-1. use the simplest CMake 
-1. Hide the growing complexity to Makefile
-1. Adds configure, build and test to GitHub pipeline.
+* start with not using CMake at all and building the thing using plain g++,
+* use the simplest CMake 
+* hide the growing complexity to Makefile
+* adds configure, build and test to GitHub pipeline.
+* use hierarchical CMake files
+* add unit tests
+* adds AI based code review
 
 ### TODO
 
-1. Use hierarchical CMake files
-2. Testing
 3. Linting
 4. Use external dependencies
 5. Use CPM
