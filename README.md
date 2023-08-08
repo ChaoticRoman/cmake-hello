@@ -39,12 +39,12 @@ Check commits one-by-one as they:
 * use hierarchical CMake files
 * add unit tests
 * adds AI based code review
+4. Use external dependencies
+5. Use CPM
 
 ### TODO
 
 3. Linting
-4. Use external dependencies
-5. Use CPM
 
 ## No build system
 
