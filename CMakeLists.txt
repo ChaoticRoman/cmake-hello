@@ -1,3 +1,5 @@
+# Header section
+
 cmake_minimum_required(VERSION 3.22)
 project(hello)
 
@@ -9,6 +11,8 @@ set(CMAKE_CXX_STANDARD 17)
 # if available
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
+# Source section
+
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 add_executable(hello
@@ -16,5 +20,18 @@ add_executable(hello
     src/mid/mid.cpp
     src/main.cpp
 )
+
+# Dependencies section
+
+include(CPM.cmake)
+
+CPMAddPackage(
+  NAME fmt
+  GIT_TAG 10.0.0
+  GITHUB_REPOSITORY fmtlib/fmt
+)
+target_link_libraries(${PROJECT_NAME} fmt::fmt)
+
+# Tests section
 
 add_subdirectory(tests)
