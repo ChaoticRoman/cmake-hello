@@ -1,5 +1,9 @@
 # CMake Hello
 
+For starting a new project, see [ModernCppStarter] repo from original author of CPM.
+
+[ModernCppStarter]: https://github.com/TheLartians/ModernCppStarter
+
 Testing how to set up cmake for project with following structure:
 
 ```
